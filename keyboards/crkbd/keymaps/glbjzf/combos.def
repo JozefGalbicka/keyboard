@@ -1,0 +1,78 @@
+//COMB(num,               NUMWORD,        KC_F, KC_V)
+COMB(num,               NUMWORD,        MT_SPC, MT_BSPC)
+COMB(q_comb,            KC_Q,           KC_C, KC_D)
+
+// R3
+COMB(backspace, KC_BSPC, KC_I, KC_O)
+
+// R2
+COMB(lctrl, OSM_LCTL, KC_S, KC_D)
+COMB(rctrl, OSM_RCTL, KC_K, KC_L)
+COMB(enter, KC_ENT, KC_J, KC_L)
+
+// R1
+COMB(lalt, OSM_LALT, KC_C, KC_V)
+COMB(ralt, OSM_RALT, KC_M, KC_COMM)
+COMB(lshift, KC_LSFT, KC_V, KC_B)
+COMB(rshift, KC_RSFT, KC_N, KC_M)
+//COMB(lgui, OSM_LGUI, KC_, KC_)
+//COMB(rgui, OSM_RGUI, KC_, KC_)
+//COMB(, KC_, KC_, KC_)
+
+COMB(lboot, QK_BOOT, KC_Q, KC_E, KC_T)
+COMB(rboot, QK_BOOT, KC_Y, KC_I, KC_P)
+
+// Numbers with cross side thumb
+COMB(comb_1,            KC_1,           MT_BSPC, KC_A)
+COMB(comb_2,            KC_2,           MT_BSPC, KC_S)
+COMB(comb_3,            KC_3,           MT_BSPC, KC_D)
+COMB(comb_4,            KC_4,           MT_BSPC, KC_F)
+COMB(comb_5,            KC_5,           MT_BSPC, KC_V)
+COMB(comb_6,            KC_6,           MT_SPC, KC_M)
+COMB(comb_7,            KC_7,           MT_SPC, KC_J)
+COMB(comb_8,            KC_8,           MT_SPC, KC_K)
+COMB(comb_9,            KC_9,           MT_SPC, KC_L)
+COMB(comb_0,            KC_0,           MT_SPC, KC_SCLN)
+// é
+//COMB(comb_e_acut,       E_ACUT,         MT_, SE_K)
+
+// Symbols with same side thumb
+// Upper
+COMB(comb_grv,          KC_GRV,            MT_SPC, KC_Q)
+COMB(comb_lcbr,         KC_LCBR,        MT_SPC, KC_W)
+COMB(comb_rcbr,         KC_RCBR,        MT_SPC, KC_E)
+COMB(comb_tild,         KC_TILD,           MT_SPC, KC_R)
+COMB(comb_pipe,         KC_PIPE,        MT_SPC, KC_T)
+
+COMB(comb_unds,         KC_UNDS,        MT_BSPC, KC_Y)
+COMB(comb_eql,          KC_EQL,         MT_BSPC, KC_U)
+COMB(comb_lt,           KC_LT,          MT_BSPC, KC_I)
+COMB(comb_gt,           KC_GT,          MT_BSPC, KC_O)
+COMB(comb_bsls,         KC_BSLS,        MT_BSPC, KC_P)
+
+// Home-row
+COMB(comb_exlm,         KC_EXLM,        MT_SPC, KC_A)
+COMB(comb_at,           KC_AT,          MT_SPC, KC_S)
+COMB(comb_hash,         KC_HASH,        MT_SPC, KC_D)
+COMB(comb_dlr,          KC_DLR,         MT_SPC, KC_F)
+COMB(comb_plus,         KC_PLUS,        MT_SPC, KC_G)
+
+COMB(comb_mins,         KC_MINS,        MT_BSPC, KC_H)
+COMB(comb_ampr,         KC_AMPR,        MT_BSPC, KC_J)
+COMB(comb_astr,         KC_ASTR,        MT_BSPC, KC_K)
+COMB(comb_lprn,         KC_LPRN,        MT_BSPC, KC_L)
+COMB(comb_rprn,         KC_RPRN,        MT_BSPC, KC_SCLN)
+
+// Lower
+//
+COMB(comb_lbrc,         KC_LBRC,        MT_SPC, KC_X)
+COMB(comb_rbrc,         KC_RBRC,        MT_SPC, KC_C)
+COMB(comb_perc,         KC_PERC,        MT_SPC, KC_V)
+//
+
+//
+COMB(comb_circ,         KC_CIRC,           MT_BSPC, KC_M)
+// on base layer
+// on base layer
+// on base layer
+
