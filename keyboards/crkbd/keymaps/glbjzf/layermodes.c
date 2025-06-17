@@ -3,7 +3,7 @@
 #include "keycodes.h"
 
 static uint16_t num_word_timer;
-static bool _num_word_enabled = false; // whether NUM layer is enabled for special handling
+static bool     _num_word_enabled = false; // whether NUM layer is enabled for special handling
 
 bool num_word_enabled(void) {
     return _num_word_enabled;
@@ -43,14 +43,14 @@ void process_num_word_activation(const keyrecord_t *record) {
 bool process_num_word(uint16_t keycode, const keyrecord_t *record) {
     if (!_num_word_enabled) return true;
 
-    //switch (keycode) {
-    //    case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-    //    case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-    //    case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
-    //        if (record->tap.count == 0)
-    //            return true;
-    //        keycode = keycode & 0xFF;
-    //}
+    // switch (keycode) {
+    //     case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+    //     case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
+    //     case QK_TAP_DANCE ... QK_TAP_DANCE_MAX:
+    //         if (record->tap.count == 0)
+    //             return true;
+    //         keycode = keycode & 0xFF;
+    // }
     switch (keycode) {
         // Don't disable num_word for keycodes below:
         case KC_1 ... KC_0:
@@ -64,12 +64,12 @@ bool process_num_word(uint16_t keycode, const keyrecord_t *record) {
         case KC_COLN:
         case KC_EQL:
         case KC_UNDS:
-        //case KC_BSPC:
-        //case KC_X:
-        //case REPEAT:
-        //case REV_REP:
-        //case KC_ENT:
-        //case xxxxxxx:
+            // case KC_BSPC:
+            // case KC_X:
+            // case REPEAT:
+            // case REV_REP:
+            // case KC_ENT:
+            // case xxxxxxx:
             break;
         case CANCEL:
             if (record->event.pressed) {
