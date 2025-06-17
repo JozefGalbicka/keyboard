@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // ###### Tap/Holds ######
 
-// Yeah
+// Differentiates between TAP and HOLD
 #define TAPPING_TERM 180
 
 // Means double-tap term. If < QUICK_TAP_TERM, then repeat the 'Tap' key, if > use the 'Mod/Layer' key. Zero value allegedly disables auto-repeat. Before known also as now deprecated 'TAPPING_FORCE_HOLD'

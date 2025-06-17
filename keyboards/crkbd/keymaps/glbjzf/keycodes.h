@@ -9,16 +9,16 @@
 
 enum layers {
     _BASE = 0,
-    _NUM,
-    _NAV,
-    _WNAV,
-    _WIN,
-    _SYM,
-    _MODS,
-    _MEDIA,// media+mouse
-    _SHRT, // shortcuts
-    _SPEC,
-    _FUN,
+    _NUM,   // numbers
+    _NAV,   // navigation
+    _WNAV,  // windows navigation
+    _WIN,   // windows
+    _SYM,   // symbols
+    _MODS,  // mods
+    _MEDIA, // media+mouse
+    _SHRT,  // shortcuts
+    _SPEC,  // special
+    _FUN,   // functions
 };
 
 enum custom_keycodes {
@@ -26,8 +26,8 @@ enum custom_keycodes {
     NUMWORD = QK_USER,
     CANCEL,
 };
-// https://docs.qmk.fm/#/keycodes?id=layer-switching
 
+// https://docs.qmk.fm/#/keycodes?id=layer-switching
 #define MT_TAB LT(_WNAV, KC_TAB)
 #define MT_SPC LT(_NUM, KC_SPC)
 

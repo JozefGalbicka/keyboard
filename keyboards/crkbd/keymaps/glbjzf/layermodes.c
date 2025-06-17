@@ -1,11 +1,14 @@
+
 #include "layermodes.h"
 #include "keycodes.h"
 
 static uint16_t num_word_timer;
-static bool _num_word_enabled = false;
+static bool _num_word_enabled = false; // whether NUM layer is enabled for special handling
+
 bool num_word_enabled(void) {
     return _num_word_enabled;
 }
+
 void enable_num_word(void) {
     _num_word_enabled = true;
     layer_on(_NUM);
@@ -14,20 +17,29 @@ void disable_num_word(void) {
     _num_word_enabled = false;
     layer_off(_NUM);
 }
+
+/**
+ * Handle NUM layer activation/deactivation based on NUMWORD press/release
+ */
 void process_num_word_activation(const keyrecord_t *record) {
     if (record->event.pressed) {
         layer_on(_NUM);
         num_word_timer = timer_read();
     } else {
         if (timer_elapsed(num_word_timer) < TAPPING_TERM) {
-            // Tapping enables NUMWORD
+            // Tapping enables NUMWORD permanently
             _num_word_enabled = true;
         } else {
-            // Holding turns off NUM when released
+            // Holding turns off NUM upon release
             layer_off(_NUM);
         }
     }
 }
+
+/**
+ * Special handling for NUMWORD layer where some keys will disable the layer
+ * @return Whether QMK should handle rest of the processing
+ */
 bool process_num_word(uint16_t keycode, const keyrecord_t *record) {
     if (!_num_word_enabled) return true;
 
@@ -69,7 +81,7 @@ bool process_num_word(uint16_t keycode, const keyrecord_t *record) {
             if (record->event.pressed) {
                 disable_num_word();
             }
+            return true;
     }
     return true;
 }
-
