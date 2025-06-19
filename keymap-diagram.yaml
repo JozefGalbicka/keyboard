@@ -1,0 +1,130 @@
+layout:
+  qmk_keyboard: corne_rotated
+  layout_name: LAYOUT_split_3x5_3
+layers:
+  BASE:
+    - [Q, W, E, R, T, Y, U, I, O, P]
+    - [{h: Ctrl, t: A}, {h: Gui, t: S}, {h: Alt, t: D}, {h: Shift, t: F}, G, H, {h: Shift, t: J}, {h: Alt, t: K}, {h: Gui, t: L}, {h: Ctrl, t: ";"}]
+    - [Z, X, C, V, B, N, M, ",", ., /]
+    - null
+    - {h: WNAV,  t: Tab}
+    - {h: NUM,   t: Space}
+    - {h: SYM,   t: Bspc}
+    - {h: NAV,   t: Esc}
+    - null
+  CMB:
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - [null, null, null, null, null, null, null, null, null, null]
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  SYM:
+    - ['`', '{', '}', '~', '|', '_', '=', '<', '>', '\']
+    - ['!', "@", "#", "$", "+", "-", "&", "*", "(", ")"]
+    - [null, '[', ']', '%', null, null, '^', ',', '.', '/']
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    #- {t: Gui, type: ghost}
+    #- Space
+    #- {t: Bspace, h: FUN}
+    #- {type: held}
+    #- Shift
+    #- {t: Alt, type: ghost}
+  NUM:
+    - [null, '+', '*', '-', null, null, 'h', 'j', 'k', 'l']
+    - ['1', '2', '3', '4', null, null, '7', '8', '9', '0']
+    - [null, 'x', null, '5', null, '_', '6', ',', '.', '/']
+    - null
+    - "Space"
+    - "Tab"
+    - "Cancel"
+    - "Enter"
+    - null
+  NAV:
+    - [null, '←', '↑', '→', null, 'h', 'j', 'k', 'l', null]
+    - ['a', 'SCtrl Tab', {h: Ctrl, t: ↓}, 'Ctrl Tab', null, null, '7', '8', '9', '0']
+    - [null, 'x', null, '5', null, '_', '6', ',', '.', '/']
+    - Esc
+    - Space
+    - Tab
+    - Cancel
+    - Enter
+    - null
+  #NAVold:
+  #  - ["Win Close", "Tab Prev", "Tab Next", "Tab Close", "Vol Up", Home, "Page Down", "Page Up", End, null]
+  #  - [Ctrl, Gui, Alt, {h: Shift, t: Tab}, "Vol Down", Left, Down, Up, Right, Calc]
+  #  - [null, "Win Prev", "Win Next", "Paste", "Play Pause", Insert, Delete, Prev, Next, null]
+  #  - {t: Gui, type: ghost}
+  #  - Ctrl
+  #  - {type: held}
+  #  - {t: Space, h: FUN}
+  #  - Shift
+  #  - {t: Alt, type: ghost}
+  #FUN:
+  #  - [F1, F2, F3, F4, F5, "Caps Lock", null, DEF, CLM, GME]
+  #  - [F6, F7, F8, F9, F10, BT1, BT2, BT3, BT4, BT5]
+  #  - [null, "Desk Prev", "Desk Next", F11, F12, "Out USB", "Out BLE", "Print Scrn", "Pause Break", "BT CLR"]
+  #  - {t: Boot, type: ghost}
+  #  - Reset
+  #  - {type: held}
+  #  - {type: held}
+  #  - Reset
+  #  - {t: Boot, type: ghost}
+  #DEF:
+  #  - [Q, W, E, R, T, Y, U, I, O, P]
+  #  - [{h: Ctrl, t: A}, {h: Gui, t: S}, {h: Alt, t: D}, {h: Shift, t: F}, G, H, {h: Shift, t: J}, {h: Alt, t: K}, {h: Gui, t: L}, {h: Ctrl, t: "'"}]
+  #  - [Z, X, C, V, B, N, M, ",", ., /]
+  #  - {h: Gui,   t: Tab, type: ghost}
+  #  - {h: Ctrl,  t: Esc}
+  #  - {h: NAV,   t: BSpace}
+  #  - {h: SYM,   t: Space}
+  #  - {h: Shift, t: Enter}
+  #  - {h: Alt,   t: Delete, type: ghost}
+combos:
+  # R3
+  - {p: [7, 8],   k: "Bspc", l: ["CMB"]}
+  # R2
+  - {p: [11, 12], k: "Ctrl", l: ["CMB"]}
+  - {p: [17, 18], k: "Ctrl", l: ["CMB"]}
+  - {p: [16, 18], k: "Ent",  l: ["CMB"], a: bottom}
+  # R1
+  - {p: [22, 23], k: "Alt",  l: ["CMB"]}
+  - {p: [26, 27], k: "Alt",  l: ["CMB"]}
+  - {p: [23, 24], k: "Shft",  l: ["CMB"]}
+  - {p: [25, 26], k: "Shft",  l: ["CMB"]}
+  - {p: [0, 2, 4], k: "BOOT",  l: ["CMB"], a: top}
+  - {p: [5, 7, 9], k: "BOOT",  l: ["CMB"], a: top}
+
+  - {p: [32, 33], k: "NUMWORD",  l: ["CMB"], a: bottom, w: 50}
+  - {p: [12, 22], k: "q",  l: ["CMB"]}
+  # TODO: SYMBOLS COMBOS
+  #
+
+
+  #- {p: [], k: "",  l: ["CMB"]}
+  #- {p: [], k: "",  l: ["CMB"]}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [],   k: ""}
+  #- {p: [22, 23], k: "`", l: ["DEF"]}
+  #- {p: [21, 22], k: "~", l: ["DEF"]}
+  #- {p: [6, 7],   k: ";", l: ["DEF"]}
+  #- {p: [12, 13], k: "(", l: ["DEF"]}
+  #- {p: [16, 17], k: ")", l: ["DEF"]}
+  #- {p: [11, 12], k: "[", l: ["DEF"]}
+  #- {p: [17, 18], k: "]", l: ["DEF"]}
+  #- {p: [26, 27], k: "\\", l: ["DEF"]}
+  #- {p: [27, 28], k: "|", l: ["DEF"]}
